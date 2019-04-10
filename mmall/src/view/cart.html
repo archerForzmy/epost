@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+ 		<%=require('html-loader!./layout/head-common.html') %>
+ 		<title><%=htmlWebpackPlugin.options.title %></title>
+ 	</head>	
+    <body>
+	<%= require('html-loader!./layout/nav.html') %>
+    <%= require('html-loader!./layout/header.html') %>
+    <!--面包屑导航-->
+    <div class="crumb">
+        <div class="w">
+            <div class="crumb-con">
+                <a href="./index.html" class="link">EPost</a>
+                <span>></span>
+                <span class="link-text"><%= htmlWebpackPlugin.options.title%></span>
+            </div>
+        </div>
+    </div>
+    <!--商品详情-->
+    <div class="page-wrap w">
+        
+    </div>
+    <%=require('html-loader!./layout/foot-common.html') %>
+    </body>
+</html> 

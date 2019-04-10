@@ -1,0 +1,34 @@
+/*通用头部导航*/
+.header .logo{
+    position: absolute;
+    left: 50px;
+    top:34px;
+    display: block;
+    font-size:36px;
+    color: #009966;
+    font-weight: bold;
+    text-decoration: none;
+}
+.header .search-con{
+     padding:40px 0 30px 250px;
+
+}
+.header .search-con .search-input{
+    width:550px;
+    height: 40px;
+    line-height: 40px;
+    padding-left:10px;
+    font-size: 15px;
+    border:2px solid #009966;
+    /*去除原始的边框*/
+    outline:none;
+}
+.header .search-con .search-btn{
+    /*absolute是脱离文档流会消除元素之间默认间隙，如果没有指定位置默认以上一个元素末尾未位置*/
+    position: absolute; 
+    height:44px;
+    width: 80px;
+}
+
+
+

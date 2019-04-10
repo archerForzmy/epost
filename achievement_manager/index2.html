@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>宜春邮政业绩管理平台</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="assets/layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="assets/layui/css/admin.css">
+	<link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
+	<link type="image/x-icon" rel="shortcut icon" href="image/logo.jpg">
+  <style type="text/css">
+    a:hover i{
+        color: #c2c2c2;
+    }
+    .page,.index{
+      display: none;
+    }
+    .layadmin-backlog-body p cite{
+      font-size: 10px;
+      font-weight: 900;
+    }
+  </style>
+</head>
+<body style="background: #eee">
+	<div class="layui-fluid">
+    	<div class="layui-row layui-col-space15">
+        <div class="layui-col-md8">
+          <div class="layui-row layui-col-space15">
+    		    <div class="layui-col-md7">
+              <div class="layui-card">
+                <div class="layui-card-header">
+                  产品交易量统计
+                  <span class="layui-badge layui-bg-blue">2018年</span>
+                  <span class="layui-badge layui-bg-orange">1季度</span>
+                  <span class="layui-badge layui-bg-green">3月</span>
+                  <span style="float: right;">
+                    <a class="layui-circle" style="color: #e2e2e2;" onclick="doShow(1)"><i class="fa fa-circle"></i></a>
+                    <a class="layui-circle" style="color: #e2e2e2;" onclick="doShow(2)"><i class="fa fa-circle"></i></a>
+                    <a class="layui-circle" style="color: #e2e2e2;" onclick="doShow(3)"><i class="fa fa-circle"></i></a>
+                  </span> 
+                </div>
+                <div class="layui-card-body">
+                  <div class="layui-carousel layadmin-carousel layadmin-backlog">
+                      <ul class="layui-row layui-col-space10 page" id="page1">
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">活期余额</h3>
+                              <p><cite>12万元</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">定期储蓄</h3>
+                              <p><cite>12万元</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">代理保险</h3>
+                              <p><cite>12万元</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">封闭式理财</h3>
+                              <p><cite>12万元</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">对公定期</h3>
+                              <p><cite>12万元</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">对公活期</h3>
+                              <p><cite>12万元</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">中邮证券</h3>
+                              <p><cite>12户</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">手机银行</h3>
+                              <p><cite>12户</cite></p>
+                          </a>
+                        </li>
+                      </ul>  
+                      <ul class="layui-row layui-col-space10 page" id="page2">
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">标快协议客户</h3>
+                              <p><cite>300百元</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">快包协议客户</h3>
+                              <p><cite>200百元</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">代理保险</h3>
+                              <p><cite>12万元</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">车险</h3>
+                              <p><cite>22万元</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">代收税费</h3>
+                              <p><cite>12千元</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">简易险</h3>
+                              <p><cite>12千元</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">分销产品</h3>
+                              <p><cite>15千元</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">新媒体</h3>
+                              <p><cite>10千元</cite></p>
+                          </a>
+                        </li>
+                      </ul>  
+                      <ul class="layui-row layui-col-space10 page" id="page3">
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">封片卡、DM广告、毕业生纪念册、村志等</h3>
+                              <p><cite>3千元</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">形象年册</h3>
+                              <p><cite>3千元</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">个性化邮票</h3>
+                              <p><cite>3千元</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">邮品</h3>
+                              <p><cite>3千元</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">商务期刊</h3>
+                              <p><cite>3千元</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">教辅报刊</h3>
+                              <p><cite>3千元</cite></p>
+                          </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                          <a lay-href="" class="layadmin-backlog-body">
+                              <h3 class="layui-elip">教辅报刊</h3>
+                              <p><cite>3千元</cite></p>
+                          </a>
+                        </li>
+                      </ul>  
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="layui-col-md5">
+              <div class="layui-card">
+                <div class="layui-card-header">
+                  专业业绩量统计
+                  <span class="layui-badge layui-bg-blue">2018年</span>
+                  <span class="layui-badge layui-bg-orange">1季度</span>  
+                  <span class="layui-badge layui-bg-green">3月</span>
+                  <span style="float: right;">
+                    <a class="layui-circle" style="color: #e2e2e2;" onclick="doShow1(1)"><i class="fa fa-circle"></i></a>
+                    <a class="layui-circle" style="color: #e2e2e2;" onclick="doShow1(2)"><i class="fa fa-circle"></i></a>
+                  </span> 
+                </div>
+                <div class="layui-card-body">
+                  <div class="layui-carousel layadmin-carousel layadmin-backlog">
+                    <ul class="layui-row layui-col-space10 index" id="index1">
+                      <li class="layui-col-xs6">
+                        <a lay-href="app/content/comment.html" class="layadmin-backlog-body">
+                          <h3>金融</h3>
+                          <p><cite>66条</cite></p>
+                        </a>
+                      </li>
+                      <li class="layui-col-xs6">
+                        <a lay-href="app/forum/list.html" class="layadmin-backlog-body">
+                          <h3>包快</h3>
+                          <p><cite>12条</cite></p>
+                        </a>
+                      </li>
+                      <li class="layui-col-xs6">
+                        <a lay-href="template/goodslist.html" class="layadmin-backlog-body">
+                          <h3>电商</h3>
+                          <p><cite>99条</cite></p>
+                        </a>
+                      </li>
+                      <li class="layui-col-xs6">
+                        <a href="javascript:;" onclick="layer.tips('不跳转', this, {tips: 3});" class="layadmin-backlog-body">
+                          <h3>分销</h3>
+                          <p><cite>20条</cite></p>
+                        </a>
+                      </li>
+                    </ul>
+                    <ul class="layui-row layui-col-space10 index" id="index2">
+                      <li class="layui-col-xs6">
+                        <a href="javascript:;" class="layadmin-backlog-body">
+                          <h3>函件</h3>
+                          <p><cite>5条</cite></p>
+                        </a>
+                      </li>
+                      <li class="layui-col-xs6">
+                        <a href="javascript:;" class="layadmin-backlog-body">
+                          <h3>集邮</h3>
+                          <p><cite>5条</cite></p>
+                        </a>
+                      </li>
+                      <li class="layui-col-xs6">
+                        <a href="javascript:;" class="layadmin-backlog-body">
+                          <h3>报刊</h3>
+                          <p><cite>5条</cite></p>
+                        </a>
+                      </li>
+                    </ul>    
+                  </div>
+                </div>
+              </div>
+            </div>     
+            <div class="layui-col-md12">
+              <!--数据报表-->
+              <div class="layui-card">
+                <div class="layui-card-header">
+                  数据概览
+                  <span class="layui-badge layui-bg-blue">2018年</span>
+                  <span style="float: right;">
+                    <a class="layui-circle" style="color: #e2e2e2;" onclick="doShow2('#main','#main1')"><i class="fa fa-circle"></i></a>
+                    <a class="layui-circle" style="color: #e2e2e2;" onclick="doShow2('#main1','#main')"><i class="fa fa-circle"></i></a>
+                  </span> 
+                </div>
+                <div class="layui-card-body">
+                  <div class="layui-anim layui-anim-fadein" id="main" style="width: 100%;height:300px;"></div>
+                  <div class="layui-anim layui-anim-fadein" id="main1" style="width: 100%;height:300px;"></div>
+                </div>
+              </div>
+              <!--排行榜-->
+              <div class="layui-card">
+                <div class="layui-tab layui-tab-brief layadmin-latestData">
+                  <ul class="layui-tab-title">
+                    <li class="layui-this">部门排行</li>
+                    <li>员工排行</li>
+                    <li>产品排行</li>
+                  </ul>
+                  <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">
+                      <table id="LAY-index-department"></table>
+                    </div>
+                    <div class="layui-tab-item">
+                      <table id="LAY-index-employees"></table>
+                    </div>
+                    <div class="layui-tab-item">
+                      <table id="LAY-index-speciality"></table>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </div>
+        </div>
+        <div class="layui-col-md4">
+          <div class="layui-card">
+            <div class="layui-card-header">
+              用户信息
+            </div>
+            <div class="layui-card-body layui-text">
+              <table class="layui-table">
+                <colgroup>
+                  <col width="100">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td>编号</td>
+                    <td>
+                      1668
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>用户名</td>
+                    <td>
+                      神隐少年
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>公司</td>
+                    <td>
+                      用友网络
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>专业</td>
+                    <td>
+                      金融
+                    </td>
+                  </tr>
+                </tbody> 
+              </table>
+            </div>  
+          </div>
+          <div class="layui-card">
+            <div class="layui-card-header">
+              效果报告工（专业）
+              <span class="layui-badge layui-bg-blue">2018年</span>
+              <span class="layui-badge layui-bg-orange">1季度</span>
+              <span class="layui-badge layui-bg-green">3月</span>
+            </div>
+            <div class="layui-card-body layadmin-takerates">
+              <div class="layui-progress" lay-showPercent="yes">
+                <h3>有效率（日同比 28% <span class="layui-edge layui-edge-top" lay-tips="增长" lay-offset="-15"></span>）</h3>
+                <div class="layui-progress-bar" lay-percent="65%"></div>
+              </div>
+              <div class="layui-progress" lay-showPercent="yes">
+                <h3>有效率（日同比 11% <span class="layui-edge layui-edge-bottom" lay-tips="下降" lay-offset="-15"></span>）</h3>
+                <div class="layui-progress-bar" lay-percent="32%"></div>
+              </div>
+              <div class="layui-progress" lay-showPercent="yes">
+                <h3>有效率（日同比 28% <span class="layui-edge layui-edge-top" lay-tips="增长" lay-offset="-15"></span>）</h3>
+                <div class="layui-progress-bar" lay-percent="65%"></div>
+              </div>
+              <div class="layui-progress" lay-showPercent="yes">
+                <h3>有效率（日同比 11% <span class="layui-edge layui-edge-bottom" lay-tips="下降" lay-offset="-15"></span>）</h3>
+                <div class="layui-progress-bar" lay-percent="32%"></div>
+              </div>
+              <div class="layui-progress" lay-showPercent="yes">
+                <h3>有效率（日同比 28% <span class="layui-edge layui-edge-top" lay-tips="增长" lay-offset="-15"></span>）</h3>
+                <div class="layui-progress-bar" lay-percent="65%"></div>
+              </div>
+              <div class="layui-progress" lay-showPercent="yes">
+                <h3>有效率（日同比 11% <span class="layui-edge layui-edge-bottom" lay-tips="下降" lay-offset="-15"></span>）</h3>
+                <div class="layui-progress-bar" lay-percent="32%"></div>
+              </div>
+              <div class="layui-progress" lay-showPercent="yes">
+                <h3>有效率（日同比 28% <span class="layui-edge layui-edge-top" lay-tips="增长" lay-offset="-15"></span>）</h3>
+                <div class="layui-progress-bar" lay-percent="65%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="layui-card">
+            <div class="layui-card-header">
+              效果报告（人员）
+              <span class="layui-badge layui-bg-blue">2018年</span>
+              <span class="layui-badge layui-bg-orange">1季度</span>
+              <span class="layui-badge layui-bg-green">3月</span>
+            </div>
+            <div class="layui-card-body layadmin-takerates">
+              <div class="layui-progress" lay-showPercent="yes">
+                <h3>前台人员（月同比 28% <span class="layui-edge layui-edge-top" lay-tips="增长" lay-offset="-15"></span>）</h3>
+                <div class="layui-progress-bar" lay-percent="65%"></div>
+              </div>
+              <div class="layui-progress" lay-showPercent="yes">
+                <h3>后台人员（月同比 11% <span class="layui-edge layui-edge-bottom" lay-tips="下降" lay-offset="-15"></span>）</h3>
+                <div class="layui-progress-bar" lay-percent="32%"></div>
+              </div>
+            </div>
+          </div>
+      </div> 
+    </div>
+       
+  </div>
+
+<script type="text/javascript" src="assets/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="assets/layui/layui.js"></script>
+<script type="text/javascript" src="assets/echarts/echarts.min.js"></script>
+<script type="text/javascript">
+//注意：导航 依赖 element 模块，否则无法进行功能性操作
+layui.use(['element','table'], function(){
+  var element = layui.element;
+	var table = layui.table;
+  table.render({
+      elem: '#LAY-index-department'
+      ,height: 257
+      ,width:'100%'
+      ,page: true //开启分页
+      ,limit:5
+      ,limits:[5,10,20]
+      ,cols: [[ //表头
+          {field: 'id', title: '编号', width:200, sort: true, fixed: 'left'}
+          ,{field: 'departmentName', title: '部门名称', width:200}
+          ,{field: 'departmentNum', title: '部门人数', width:165, sort: true}
+          ,{field: 'integration', title: '积分', width:140, sort:true}
+      ]]
+      ,data:[{'id':1,'departmentName':'金融业务部','departmentNum':'13人','integration':'10分'}
+      ,{'id':2,'departmentName':'渠道平台部','departmentNum':'13人','integration':'10分'}
+      ,{'id':3,'departmentName':'市场部','departmentNum':'13人','integration':'10分'}
+      ,{'id':4,'departmentName':'人力资源部','departmentNum':'13人','integration':'10分'}]
+    });
+  table.render({
+      elem: '#LAY-index-employees'
+      ,height: 257
+      ,width:'100%'
+      ,page: true //开启分页
+      ,limit:5
+      ,limits:[5,10,20]
+      ,cols: [[ //表头
+          {field: 'id', title: '编号', width:100, sort: true, fixed: 'left'}
+          ,{field: 'employeeName', title: '员工姓名', width:200}
+          ,{field: 'isBackground', title: '种类', width:132}
+          ,{field: 'workType', title: '工种', width:132}
+          ,{field: 'integration', title: '积分', width:140, sort:true}
+      ]]
+      ,data:[{'id':1,'employeeName':'神隐少年','isBackground':'前台','workType':'A类','integration':'15分'}
+          ,{'id':2,'employeeName':'神隐少年','isBackground':'前台','workType':'B类','integration':'15分'}
+          ,{'id':3,'employeeName':'神隐少年','isBackground':'前台','workType':'C类','integration':'15分'}
+          ,{'id':3,'employeeName':'神隐少年','isBackground':'前台','workType':'D类','integration':'15分'}
+      ]
+    });
+  table.render({
+      elem: '#LAY-index-speciality'
+      ,height: 257
+      ,width:'100%'
+      ,page: true //开启分页
+      ,limit:5
+      ,limits:[5,10,20]
+      ,cols: [[ //表头
+          {field: 'id', title: '编号', width:100, sort: true, fixed: 'left'}
+          ,{field: 'businessName', title: '产品名', width:200}
+          ,{field: 'businessType2', title: '种类', width:132}
+          ,{field: 'businessType1', title: '专业', width:132}
+          ,{field: 'integration', title: '积分', width:140, sort:true}
+      ]]
+      ,data:[{'id':1,'businessName':'中邮期缴三年期','businessType2':'代理保险','businessType1':'金融','integration':'15分'}
+            ,{'id':2,'businessName':'中邮期缴三年期','businessType2':'代理保险','businessType1':'金融','integration':'15分'}
+            ,{'id':3,'businessName':'中邮期缴三年期','businessType2':'代理保险','businessType1':'金融','integration':'15分'}
+            ,{'id':4,'businessName':'中邮期缴三年期','businessType2':'代理保险','businessType1':'金融','integration':'15分'}
+      ]
+    });
+	
+});	
+
+var myChart = echarts.init(document.getElementById('main'));
+var option = {
+  title: {
+        text: '年总积分趋势'
+    },
+    tooltip: {},
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ["2018/1","2018/2","2018/3","2018/4","2018/5","2018/6","2018/7","2018/8","2018/9","2018/10","2018/11","2018/12"]
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [82, 93, 90, 93, 129, 133, 132, 93, 90, 93, 129, 133],
+        type: 'line',
+        areaStyle: {},
+        itemStyle: {normal: {color: '#5FB878'}},
+        smooth: true
+    }]
+};
+myChart.setOption(option);
+
+var myChart1 = echarts.init(document.getElementById('main1'));
+// 指定图表的配置项和数据
+var option1 = {
+    title: {
+        text: '年各专业积分图'
+    },
+    tooltip: {},
+    legend: {
+        data:['金融','电商','包块','分销','函件','集邮','报刊']
+    },
+    xAxis: {
+        data: ["2018/1","2018/2","2018/3","2018/4","2018/5","2018/6","2018/7","2018/8","2018/9","2018/10","2018/11","2018/12"]
+    },
+    yAxis: {},
+    series: [{
+        name: '金融',
+        type: 'bar',
+        data: [5, 20, 36, 10, 10, 20, 11, 36, 10, 10, 20, 11]
+    },{
+        name: '电商',
+        type: 'bar',
+        data: [19, 30, 26, 11, 40, 19, 14, 26, 11, 40, 19, 14]
+    },{
+        name: '包块',
+        type: 'bar',
+        data: [15, 10, 16, 20, 15, 33, 19, 16, 20, 15, 33, 19]
+    },{
+        name: '分销',
+        type: 'bar',
+        data: [25, 23, 13, 17, 11, 27, 22, 13, 17, 11, 27, 22]
+    },{
+        name: '函件',
+        type: 'bar',
+        data: [25, 23, 13, 17, 11, 27, 22, 13, 17, 11, 27, 22]
+    },{
+        name: '集邮',
+        type: 'bar',
+        data: [25, 23, 13, 17, 11, 27, 22, 13, 17, 11, 27, 22]
+    },{
+        name: '报刊',
+        type: 'bar',
+        data: [25, 23, 13, 17, 11, 27, 22, 13, 17, 11, 27, 22]
+    }]
+};
+myChart1.setOption(option1);
+
+doShow(1);
+doShow1(1);
+function doShow(index){
+  $(".page").each(function(index, el) {
+      $(el).hide(1000);
+  });
+  $("#page"+index).show(1000);
+}
+function doShow1(index){
+  $(".index").each(function(index, el) {
+      $(el).hide(1000);
+  });
+  $("#index"+index).show(1000);
+}
+doShow2("#main","#main1");
+function doShow2(id1,id2){
+  $(id1).css({'display':'none'});
+  $(id2).css({'display':'none'});
+  $(id1).css({'display':'block'});
+}
+
+</script>
+</body>
+</html>

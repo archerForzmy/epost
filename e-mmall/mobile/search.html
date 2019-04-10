@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <!--ios是否运行创建快捷启动方式-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <!--ios顶部通知栏的样式 黑色-->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--遇到数字不让转成电话号码格式-->
+    <meta content="telephone=no" name="format-detection">
+    <meta content="mail=no" name="format-detection">
+    <meta name="description" content="宜邮商城是集合邮政邮票，报刊，特色农产品为一体的特色商城">
+    <meta name="Keywords" content="宜春邮政，邮票，报刊，农产品">
+    <link type="image/x-icon" rel="shortcut icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>epost</title>    
+</head>
+
+<body>
+	<!--首页内容-->
+	<div class="ct_container">
+		<header class="ct_header">
+			<a href="javascript:history.back();" class="left"><span class="fa fa-arrow-left"></span></a>
+			<h3>搜索中心</h3>
+		</header>
+		<div class="ct_content">
+			<!--MUI滑动区域-->
+			<div class="ct_wrapper">
+				<!--搜索区域-->
+				<div class="ct_search">
+					<form action="#">
+						<input type="search" placeholder="搜索你喜欢的商品"/>
+					</form>
+					<a href="javascript:;">搜索</a>
+				</div>
+				<!--历史区域-->
+				<div class="ct_history">
+					<div class="ct_history_text">
+						<a>搜索历史</a>
+						<a id="deleteKey"><span class="fa fa-trash"></span>清空记录</a>
+					</div>
+					<div class="ct_history_list">
+						<!--MUI列表控件-->
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="ct_footer">
+			<a href="index.html" class="tab_home fa fa-home"><span>首页</span></a>
+			<a href="category.html" class="tab_cate fa fa-bars"><span>分类</span></a>
+			<a href="cart.html" class="tab_cart fa fa-shopping-cart"><span>购物车</span></a>
+			<a href="setting.html" class="tab_user fa fa-user"><span>个人中心</span></a>
+		</footer>
+	</div>
+
+	<script type="text/tamplate" id="history">
+		<ul class="mui-table-list">
+    		<% for(var i=0;i<list.length;i++) {%>	
+    			<li class="mui-table-view-cell">
+    				<a href="searchList.html?key=<%=list[i]%>"><%=list[i]%></a>
+    				<a href="javascript:;" class="fa fa-times close" data-history="<%=list[i]%>"></a>
+    			</li>
+    		<% } %>	
+		</ul>
+	</script>
+
+	<script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/zepto/zepto.min.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <!--ios是否运行创建快捷启动方式-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <!--ios顶部通知栏的样式 黑色-->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--遇到数字不让转成电话号码格式-->
+    <meta content="telephone=no" name="format-detection">
+    <meta content="mail=no" name="format-detection">
+    <meta name="description" content="宜邮商城是集合邮政邮票，报刊，特色农产品为一体的特色商城">
+    <meta name="Keywords" content="宜春邮政，邮票，报刊，农产品">
+    <link type="image/x-icon" rel="shortcut icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/retrieve.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>epost</title>    
+</head>
+
+<body>
+	<!--首页内容-->
+	<div class="ct_container">
+		<header class="ct_header">
+			<a href="javascript:history.back();" class="left"></a>
+			<h3>找回密码</h3>
+			<a href="add.html" class="right"></a>
+		</header>
+		<div class="ct_content">
+			<div id="retrieve">
+				<form id='retrieve-form' class="mui-input-group">
+					<div class="mui-input-row">
+						<label><i class="fa fa-user"></i></label>
+						<input type="text" name="username" class="mui-input-clear mui-input" placeholder="请输入用户名">
+					</div>
+				</form>
+				<div class="mui-content-padded">
+					<a id='next' class="mui-btn mui-btn-block mui-btn-primary">下一步</a>
+					<div class="link-area">
+						<a id='reg' href="login.html">返回登录</a> 
+					</div>
+				</div>
+			</div>
+			<div id="question">
+				<div id="prompt"></div>
+				<form id='question-form' class="mui-input-group">
+					<div class="mui-input-row">
+						<label><i class="fa fa-key"></i></label>
+						<input type="text" id="ans" name="answer" class="mui-input-clear mui-input" placeholder="输入答案">
+					</div>
+				</form>
+				<div class="mui-content-padded">
+					<a id='answer' class="mui-btn mui-btn-block mui-btn-primary">下一步</a>
+					<div class="link-area">
+						<a id='reg' href="login.html">返回登录</a> 
+					</div>
+				</div>
+			</div>	
+			<div id="pass">
+				<form id='pass-form' class="mui-input-group">
+					<div class="mui-input-row">
+						<label><i class="fa fa-lock"></i></label>
+						<input type="text" id="passwordNew" name="password" class="mui-input-clear mui-input" placeholder="请输入新密码">
+					</div>
+				</form>
+				<div class="mui-content-padded">
+					<a id='password' class="mui-btn mui-btn-block mui-btn-primary">提交</a>
+					<div class="link-area">
+						<a id='reg' href="login.html">返回登录</a> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+	<script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/zepto/zepto.min.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/retrieve.js"></script>
+</body>
+</html>

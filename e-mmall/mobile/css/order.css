@@ -1,0 +1,13 @@
+.mui-card-header{
+	color: #666;
+	font-size: 12px;
+}
+.mui-table-view .mui-media-object{
+	width: 60px;
+	height: 60px;
+}
+.mui-card-content-inner span{
+	float: right;
+	color: #666;
+	font-size: 12px;
+}

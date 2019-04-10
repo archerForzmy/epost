@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <!--ios是否运行创建快捷启动方式-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <!--ios顶部通知栏的样式 黑色-->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--遇到数字不让转成电话号码格式-->
+    <meta content="telephone=no" name="format-detection">
+    <meta content="mail=no" name="format-detection">
+    <meta name="description" content="宜邮商城是集合邮政邮票，报刊，特色农产品为一体的特色商城">
+    <meta name="Keywords" content="宜春邮政，邮票，报刊，农产品">
+    <link type="image/x-icon" rel="shortcut icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>epost</title>    
+</head>
+
+<body>
+	<!--首页内容-->
+	<div class="ct_container">
+		<header class="ct_header">
+			<a href="javascript:history.back();" class="left"></a>
+			<h3>登录</h3>
+			<a href="add.html" class="right"></a>
+		</header>
+		<div class="ct_content">
+			<form id='login-form' class="mui-input-group">
+				<div class="mui-input-row">
+					<label><i class="fa fa-user"></i></label>
+					<input id='account' type="text" name="username" class="mui-input-clear mui-input" placeholder="请输入账号">
+				</div>
+				<div class="mui-input-row">
+					<label><i class="fa fa-lock"></i></label>
+					<input id='password' type="password" name="password" class="mui-input-clear mui-input" placeholder="请输入密码">
+				</div>
+			</form>
+			<div class="mui-content-padded">
+				<a id='login' class="mui-btn mui-btn-block mui-btn-primary">登录</a>
+				<div class="link-area">
+					<a id='reg' href="register.html">注册账号</a> 
+					<span class="spliter">|</span> 
+					<a id='forgetPassword' href="retrieve.html">忘记密码</a>
+					<span class="spliter">|</span> 
+					<a id='index' href="index.html">返回首页</a>
+				</div>
+			</div>
+			<div class="mui-content-padded oauth-area">
+				
+			</div>
+		</div>
+	</div>
+
+	
+
+	<script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/zepto/zepto.min.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

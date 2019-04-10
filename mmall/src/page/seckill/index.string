@@ -1,0 +1,64 @@
+<div class="intro-wrap">
+    <!--图片区域-->
+    <div class="p-img-con">
+        <div class="main-img-con">
+            <img class="main-img" src="{{imageHost}}{{mainImage}}" alt="{{name}}"/>
+        </div>
+        <ul class="p-img-list">
+            {{#subImages}}
+            <li class="p-img-item">
+                <img class="p-img" src="{{imageHost}}{{.}}" alt="{{name}}" />
+            </li>
+            {{/subImages}}
+        </ul>
+    </div>
+    <!--价格区域-->
+    <div class="p-info-con">
+        <h1 class="p-name">{{seckillName}}</h1>
+        <p class="p-subtitle">{{subtitle}}</p>
+        <div class="s-info-plane">
+                <div class="s-label">
+                    <i class="fa fa-bolt"></i>    
+                    限时秒杀
+                </div>
+                <div class="s-info">
+                    剩余时间
+                    <span class="s-date day">--</span>
+                    <span class="s-date hour">--</span>
+                    <span class="s-date minute">--</span>
+                    <span class="s-date second">--</span>
+                </div>
+        </div>
+        <div class="p-info-item p-price-con">
+            <span class="label">秒杀价:</span>
+            <span class="info">￥{{seckillPrice}}</span>
+            <span class="info old-price">[￥{{price}}]</span>
+        </div>
+        <div class="p-info-item">
+            <span class="label">库存:</span>
+            <span class="info">{{seckillStock}}</span>
+        </div>
+        <div class="p-info-item p-count-con">
+            <span class="label">数量:</span>
+            <input class="p-count" value="1" readonly=""/>
+            <span class="p-count-btn plus">+</span>
+            <span class="p-count-btn minus">-</span>
+        </div>
+        <div class="p-info-item">
+            <a class="btn seckill-add">立即抢购</a>
+        </div>
+    </div>
+</div>
+<!--详情区域-->
+<div class="detail-wrap">
+    <div class="detail-tab-con">
+        <ul class="tab-list">
+            <li class="tab-item active">详细描述</li>
+        </ul>
+    </div>
+    <!--详情富文本-->
+    <div class="detail-con">
+        <!-- 三层括号表示对渲染方式的加载 -->
+        {{{detail}}}
+    </div>
+</div>

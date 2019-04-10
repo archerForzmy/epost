@@ -1,0 +1,68 @@
+.ct_search{
+	width: 100%;
+	padding:10px;
+	position: relative;
+}
+
+.ct_search input{
+	width: 100%;
+	height: 30px;
+	border-radius: 4px;
+	border: 1px solid #009966;
+	line-height: 30px;
+	font-size: 12px;
+	text-align: left;
+	padding-left: 10px;
+}
+
+.ct_search a{
+	height: 30px;
+	width: 60px;
+	color: #fff;
+	background: #009966;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+}
+
+/*历史记录*/
+.ct_history .ct_history_text{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.ct_history .ct_history_text a{
+	width: 50%;
+	font-size: 12px;
+	float: left;
+	display: block;
+	color: #666;
+}
+.mui-table-view-cell>a{
+	font-size: 12px;
+	color: #aaa;
+}
+
+.ct_history .ct_history_text a:last-child{
+	text-align: right;
+}
+
+.ct_history .ct_history_list{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.ct_history .ct_history_list li a:last-child{
+	position: absolute;
+	right: 10px;
+	top: 14px;
+}
+
+.ct_history .ct_history_list li a:frist-child{
+	position: absolute;
+	left: 10px;
+}

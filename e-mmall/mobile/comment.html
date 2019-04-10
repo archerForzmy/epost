@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <!--ios是否运行创建快捷启动方式-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <!--ios顶部通知栏的样式 黑色-->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--遇到数字不让转成电话号码格式-->
+    <meta content="telephone=no" name="format-detection">
+    <meta content="mail=no" name="format-detection">
+    <meta name="description" content="宜邮商城是集合邮政邮票，报刊，特色农产品为一体的特色商城">
+    <meta name="Keywords" content="宜春邮政，邮票，报刊，农产品">
+    <link type="image/x-icon" rel="shortcut icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/comments.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>epost</title>    
+</head>
+
+<body>
+	<!--首页内容-->
+	<div class="ct_container">
+		<header class="ct_header">
+			<a href="javascript:history.back();" class="left"><span class="fa fa-arrow-left"></span></a>
+			<h3>商品评价</h3>
+			<a href="javascript:;" class="right" id="submit_comment"><span class="fa fa-edit"></span></a>
+		</header>
+		<div class="ct_content">
+			<!--MUI滑动区域-->
+			<div class="ct_wrapper">
+				<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="mui-content">
+                    		<div class="comment-type">
+                        		<span class="type active" data-index="1">好评</span> 
+                        		<span class="type" data-index="2">中评</span>  
+                        		<span class="type" data-index="3">差评</span>  
+                    		</div>
+                    		<div class="comment-star">
+                    			<span class="fa fa-star active" data-index="1"></span>
+                    			<span class="fa fa-star active" data-index="2"></span>
+                    			<span class="fa fa-star active" data-index="3"></span>
+                    			<span class="fa fa-star active" data-index="4"></span>
+                    			<span class="fa fa-star active" data-index="5"></span>
+                    		</div>
+                    		<div class="comment-body">
+                        		<textarea class="comment-body-content" rows="10" autofocus spellcheck="false">
+                        		</textarea>
+                    		</div>
+                    	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="p_option">
+			
+		</footer>
+	</div>
+	
+
+	<script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/jquery/jquery-3.2.1.min.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/comments.js"></script>
+</body>
+</html>

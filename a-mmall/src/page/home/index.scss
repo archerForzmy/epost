@@ -1,0 +1,49 @@
+.green {
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+.blue {
+  background-color: #4CB1CF;
+  color: #fff
+}
+
+.red {
+  background-color: #F0433D;
+  color: #fff;
+}
+
+.brown {
+  background-color: #f0ad4e;
+  color: #fff;
+}
+
+.color-box{
+	display:block;
+	height:160px;
+	text-align:center;
+	padding: 20px 10px;
+	margin-top:10px;
+	opacity:0.9;
+	transition:all 0.3s;
+	&:hover{
+		text-decoration:none;
+		color:#555;
+		opacity:1;
+		transform:scale(1.08);
+	}
+	&:focus{
+		text-decoration:none;
+	}
+	.count{
+		font-size:50px;
+		height:80px;
+		line-height:80px;
+	}
+	.desc{
+		font-size:18px;
+		.fa{
+			margin-right:5px;
+		}
+	}
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+ 		<%=require('html-loader!./layout/head-common.html') %>
+ 		<title><%=htmlWebpackPlugin.options.title %></title>
+ 	</head>	
+<body>
+	<%=require('html-loader!./layout/nav-simple.html') %>
+	<div class="page-wrap">
+		<div class="w">
+			<div class="user-con">
+				<!--标题-->
+                <div class="user-title">用户登录</div>
+                <!--表单区域-->
+                <div class="user-box">
+                	<!--登录错误信息提示区域-->
+                    <div class="error-item">
+                        <i class="fa fa-minus-circle error-icon"></i>
+                        <p class="err-msg">Error</p>
+                    </div>
+                    <!--表单项-->
+                    <div class="user-item">
+                        <label class="user-label" for="username">
+                            <i class="fa fa-user"></i>
+                        </label>
+                        <input id="username" class="user-content"
+                               placeholder="请输入用户名" autocomplete="off">
+                    </div>
+                    <!--表单项-->
+                    <div class="user-item">
+                        <label class="user-label" for="password">
+                            <i class="fa fa-lock"></i>
+                        </label>
+                        <input id="password" class="user-content" type="password"
+                               placeholder="请输入密码" autocomplete="off">
+                    </div>
+                    <!--表单项-->
+                    <a class="btn btn-submit" id="submit">登录</a>
+                    <!--辅助选项-->
+                    <div class="link-item">
+                        <a href="./reset.html" class="link"
+                        target="_blank">忘记密码</a>
+                        <a href="./register.html" class="link"
+                        target="_blank">免费注册</a>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+	<%=require('html-loader!./layout/foot-common.html') %>
+</body>
+</html>

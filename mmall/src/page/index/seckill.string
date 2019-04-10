@@ -1,0 +1,25 @@
+<div class="seckill">
+    <ul class="seckill-con">
+        <li class="seckill-page">
+            {{#list}}
+                <a class="seckill-item" target="_blank" href="./seckill.html?seckillId={{seckillId}}">
+                    <img class="seckill-img" src="{{imageHost}}{{mainImage}}" alt="{{seckillName}}"/>
+                    <p class="seckill-item-desc">{{seckillName}}</p>
+                    <div class="seckill-price">
+                        <span class="new"><i>¥</i> <span>{{seckillPrice}}</span></span>
+                        <span class="old"><i>¥</i> <span>{{price}}</span></span>
+                    </div>
+                </a>
+            {{/list}}
+            {{^list}}
+                <p class="err-tip">很抱歉，实在找不到您要的商品。</p>
+            {{/list}}
+        </li>
+    </ul>
+    <div class="seckill-arrow prev">
+        <i class="fa fa-angle-left"></i>
+    </div>
+    <div class="seckill-arrow next">
+        <i class="fa fa-angle-right"></i>
+    </div>
+</div>

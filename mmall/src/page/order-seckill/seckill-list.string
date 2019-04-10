@@ -1,0 +1,32 @@
+<table class="product-table">
+    <tr>
+        <th class="cell-img">&nbsp;</th>
+        <th class="cell-info">活动描述</th>
+        <th class="cell-price">价格</th>
+        <th class="cell-count">数量</th>
+        <th class="cell-total">小计</th>
+    </tr>
+    <tr>
+        <td class="cell-img">
+            <a href="./seckill.html?seckillId={{seckillId}}" target="_blank">
+                <img class="p-img"
+                     src="{{imageHost}}{{productImage}}"
+                     alt="{{seckillName}}"/>
+            </a>
+        </td>
+        <td class="cell-info">
+            <a href="./seckill.html?seckillId={{seckillId}}" class="link"  target="_blank">{{seckillName}}</a>
+        </td>
+        <td class="cell-price">
+            <span class="new">￥{{currentUnitSeckillPrice}}</span>
+            <span class="old">￥{{currentUnitPrice}}</span>
+        </td>
+        <td class="cell-count">{{quantity}}</td>
+        <td class="cell-total">￥{{totalPrice}}</td>
+    </tr>
+</table>
+<div class="submit-con">
+    <span>订单总价:</span>
+    <span class="submit-total">￥{{totalPrice}}</span>
+    <span class="btn order-submit">提交订单</span>
+</div>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <!--ios是否运行创建快捷启动方式-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <!--ios顶部通知栏的样式 黑色-->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--遇到数字不让转成电话号码格式-->
+    <meta content="telephone=no" name="format-detection">
+    <meta content="mail=no" name="format-detection">
+    <meta name="description" content="宜邮商城是集合邮政邮票，报刊，特色农产品为一体的特色商城">
+    <meta name="Keywords" content="宜春邮政，邮票，报刊，农产品">
+    <link type="image/x-icon" rel="shortcut icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/mui/css/mui.picker.css">
+    <link rel="stylesheet" href="assets/mui/css/mui.poppicker.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/addAddr.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>epost</title>    
+</head>
+
+<body>
+	<!--首页内容-->
+	<div class="ct_container">
+		<header class="ct_header">
+			<a href="javascript:history.back();" class="left"><span class="fa fa-arrow-left"></span></a>
+			<h3>收货地址</h3>
+			<a href="setting.html" class="right"><span class="fa fa-cog"></span></a>
+		</header>
+		<div class="ct_content">
+			<form id='login-form' class="mui-input-group">
+				<div class="mui-input-row">
+					<label>收件人</label>
+					<input name='receiverName' type="text" class="mui-input-clear mui-input" placeholder="请输入姓名">
+				</div>
+				<div class="mui-input-row">
+					<label>联系电话</label>
+					<input name='receiverPhone' type="number" class="mui-input-clear mui-input" placeholder="请输入电话">
+				</div>
+				<div class="mui-input-row">
+					<label>地区</label>
+					<input name='area' id="area" type="text" class="mui-input-clear mui-input" placeholder="请选择省/市">
+				</div>
+				<div class="mui-input-row">
+					<label>详细地址</label>
+					<input name='receiverAddress' type="text" class="mui-input-clear mui-input" placeholder="街道，门牌号，房间号">
+				</div>
+				<div class="mui-input-row">
+					<label>邮政编码</label>
+					<input name='receiverZip' type="number" class="mui-input-clear mui-input" placeholder="请输当地邮编">
+				</div>
+			</form>
+			<br/>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell" id="addAddr" style="text-align: center;background: #009966;color: #fff">
+					保存
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	
+
+	<script src="assets/mui/js/mui.min.js"></script>
+	<script src="assets/mui/js/mui.picker.js"></script>
+	<script src="assets/mui/js/mui.poppicker.js"></script>
+	<script src="assets/mui/js/city.data-3.js"></script>
+	<script src="assets/zepto/zepto.min.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/addAddr.js"></script>
+</body>
+</html>

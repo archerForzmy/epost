@@ -1,0 +1,113 @@
+/*面包削导航*/
+.crumb{
+    margin-bottom: 15px;
+    height: 50px;
+    line-height: 50px;
+    background: #eee;
+    color: #888;
+    font-size: 14px;
+    border-top: 2px solid #009966;
+}
+
+/* 订单信息 */
+.order-info .text-line{
+    height: 30px;
+    line-height: 30px;
+}
+.order-info .text-line .text{
+    margin-right: 30px;
+}
+.order-info .btn{
+    width: 80px;
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+/* 商品清单 */
+.product-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.product-table .cell-th{
+    background: #eee;
+}
+.product-table .cell{
+    border-bottom: 1px dashed #eee;
+    background: #fafafa;
+}
+.product-table .cell-img{
+    padding: 10px;
+    width: 10%;
+    text-align: center;
+}
+.product-table .cell-img .p-img{
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ddd;
+}
+.product-table .cell-info{
+    width: 45%;
+    text-align: left;
+}
+.product-table .cell-price{
+    width: 15%;
+    text-align: center;
+}
+.product-table .cell-count{
+    width: 15%;
+    text-align: center;
+}
+.product-table .cell-total{
+    width: 15%;
+    text-align: center;
+}
+
+/* 总价钱 */
+.total{
+    text-align: right;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+.total .total-price{
+    font-weight: bold;
+    color: #009966;
+}
+
+/*物流信息*/
+.error-tip{
+    text-align: center;
+    color: #666;
+    font-weight: 900;
+}
+.trade-no{
+    background: #eee;
+    padding: 10px;
+}
+.trade-info{
+    color:#666;
+    padding: 10px;
+    margin-left: 20px;
+    border-left: 1px solid #aaa;
+    position: relative;
+    vertical-align: top;
+}
+.trade-info::before{
+    content: ""; 
+    position: absolute;
+    left: -4px;
+    top: 15px;
+    border: 4px solid #aaa;
+    border-radius: 4px;
+}
+.trade-info .time{
+    margin-right: 100px;
+    padding-left: 10px; 
+}
+

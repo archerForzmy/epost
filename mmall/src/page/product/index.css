@@ -1,0 +1,323 @@
+/*面包削导航*/
+.crumb{
+    margin-bottom: 15px;
+    height: 50px;
+    line-height: 50px;
+    background: #eee;
+    color: #888;
+    font-size: 14px;
+    border-top: 2px solid #009966;
+}
+
+/* 图片区 */
+.intro-wrap{
+	/*顶层清除浮动*/
+    overflow: hidden;
+}
+.intro-wrap .p-img-con{
+    float: left;
+    width: 420px;
+}
+/* 图片区*主图 */
+.intro-wrap .p-img-con .main-img-con{
+    height: 400px;
+    border: 1px solid #ddd;
+}
+.intro-wrap .p-img-con .main-img-con .main-img{
+    height: 100%;
+    width: 100%;
+}
+/* 图片区*缩略图 */
+.intro-wrap .p-img-con .p-img-list{
+	/*顶层清除浮动*/
+    overflow: hidden;
+    /*避免子元素溢出折行*/
+    height: 76px;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+.intro-wrap .p-img-con .p-img-item{
+    float: left;
+    margin-right: 10px;
+    width: 72px;
+    height: 72px;
+    border: 2px solid #eee;
+    cursor: pointer;
+}
+.intro-wrap .p-img-con .p-img-item:hover{
+    border: 2px solid #009966;
+}
+.intro-wrap .p-img-con .p-img-item .p-img{
+    width: 100%;
+    height: 100%;
+}
+
+/* 商品信息 */
+.intro-wrap .p-info-con{
+    float: left;
+    width: 640px;
+    margin-left: 20px;
+}
+.intro-wrap .p-info-con .p-name{
+    font-size: 20px;
+    color: #333;
+}
+.intro-wrap .p-info-con .p-subtitle{
+    font-size: 15px;
+    color: #009966;
+    line-height: 30px;
+}
+.intro-wrap .p-info-con .p-info-item{
+    position: relative;
+    padding: 0 10px;
+    margin-top: 20px;
+}
+.intro-wrap .p-info-con .p-info-item .label{
+    display: inline-block;
+    width: 50px;
+    color: #999;
+}
+/* 价格部分 */
+.intro-wrap .p-info-con .p-price-con{
+    background: #eee;
+    padding: 10px;
+}
+.intro-wrap .p-info-con .p-price-con .info{
+    color: #009966;
+    font-size: 18px;
+}
+.intro-wrap .p-info-con .p-price-con .comment{
+    width: 40px;
+    line-height: 14px;
+    float: right;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+    border-left: 1px solid #cccccc;
+}
+/* 数量部分 */
+.intro-wrap .p-info-con .p-count-con .p-count{
+    height: 36px;
+    line-height: 36px;
+    font-size: 15px;
+    width: 45px;
+    text-align: center;
+    outline: none;
+    border: 1px solid #aaa;
+}
+.intro-wrap .p-info-con .p-count-con .p-count-btn{
+    position: absolute;
+    left: 115px;
+    display: block;
+    width: 20px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    font-size: 10px;
+    border: 1px solid #aaa;
+    background: #fff;
+    cursor: pointer;
+   	/*避免按钮文字被选中*/
+    -moz-user-select : none;
+    -webkit-user-select : none;
+    -ms-user-select : none;
+    user-select : none;
+}
+.intro-wrap .p-info-con .p-count-con .p-count-btn.plus{
+    top: 0;
+}
+.intro-wrap .p-info-con .p-count-con .p-count-btn.minus{
+    bottom: 0;
+}
+/* 商品详细信息 */
+.detail-wrap{
+    margin-top: 15px;
+}
+.detail-wrap .tab-list{
+    background: #eee;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    border-bottom: 1px solid #009966;
+}
+.detail-wrap .tab-list .tab-item{
+    float: left;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+.detail-wrap .tab-list .tab-item.active{
+    background: #009966;
+    color: #fff;
+}
+/*详情富文本样式*/
+.detail-wrap .detail-con{
+    padding-top: 20px;
+    background: #fff;
+    display: none;
+}
+.detail-wrap .detail-con.active{
+    display: block;
+}
+.detail-wrap .detail-con img{
+    display: block;
+    margin: 0 auto;
+}
+/* 错误信息 */
+.err-tip{
+    height: 60px;
+    line-height: 60px;
+    color: #f60;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background: #eee;
+}
+/*评论添加表单*/
+.comment-from{
+    border-bottom: 1px solid #eee;
+}
+.comment-from .panel{
+    padding: 0 20px;
+}
+.comment-from .panel .panel-body{
+    padding: 0 40px;
+    font-size: 16px;
+    color: #666;
+}
+.comment-from .panel .panel-body .comment-star,.comment-type,.comment-body{
+    font-size: 16px;
+    padding: 10px 0px;
+}
+.comment-from .panel .panel-body .comment-type .type.active{
+    background: #009966;
+    color:#fff;
+}
+.comment-from .panel .panel-body .comment-star .c-stars{
+    color: #ccc;
+    font-size: 22px;
+}
+.comment-from .panel .panel-body .comment-star .c-stars .c-star.active{
+    color:#009966;
+}
+.comment-from .panel .panel-body .comment-star .c-stars:hover{
+    color: #ccc;
+}
+.comment-from .panel .panel-body .comment-star .c-stars:hover .c-star{
+    color:#009966;
+}
+.comment-from .panel .panel-body .comment-star .c-star:hover ~ .c-star{
+    color:#ccc;
+}
+
+.comment-from .panel .panel-body .comment-btn .btn{
+    font-size:16px;
+    padding:0px 20px; 
+    cursor: pointer;
+    float: right;
+}
+.comment-from .panel .panel-body label{
+    font-weight: 900;
+    display: inline-block;
+    width:70px;
+    text-align: right;
+    margin-right: 10px; 
+}
+.comment-from .panel .panel-body label.comment-body-title{
+    height: 120px;
+    vertical-align: top;
+}
+.comment-from .panel .panel-body textarea{
+    resize:none;
+    color: #666464;
+    border:0;
+    border-radius:5px;
+    padding: 10px;
+    background-color:rgba(241,241,241,.98);
+    outline: none;
+    width: 850px;
+    height: 100px;
+    overflow-y:none;
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: 900;
+}
+/*评论列表样式*/
+.panel.comment-item:hover{
+    box-shadow: 1px 1px 5px #ddd;
+}
+.panel.comment-item{
+    border-bottom: 1px solid #eee;
+}
+.panel .comment{
+    overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+}
+.panel .username{
+    float: left;
+    font-size: 14px;
+    color: #666;
+}
+.panel .star{
+    float: right;
+    font-size: 14px;
+    color: #eeeeee;
+}
+.panel .star .active{
+    color:#009966;
+}
+.panel .type{
+    background: #eee;
+    padding: 8px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 900;
+}
+.panel .type:hover{
+    background: #009966;
+    color: #fff;
+}
+.panel .date{
+    float: right;
+    font-size: 12px;
+    color: #666;
+}
+.page-info{
+    line-height: 30px;
+    padding-bottom: 10px;
+    height: 30px;
+    color: #666;
+    text-align: center;
+}
+.page-info .page-index{
+    font-size: 12px;
+    padding: 8px 12px;
+    border-radius: 16px;
+    color: #666;
+    background: #eee;
+    cursor: pointer;
+}
+.page-info .page-index:hover{
+    color: #fff;
+    background: #009966;
+}
+.page-info .page-index.active{
+    color: #fff;
+    background: #009966;
+}
+.page-info .page-has{
+    font-size: 12px;
+    padding: 8px;
+    border-radius: 16px;
+    background: #eee;
+    color: #666;
+    cursor: pointer;
+}
+.page-info .page-has:hover{
+    color: #fff;
+    background: #009966;
+}
+

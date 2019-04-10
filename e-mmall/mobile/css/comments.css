@@ -1,0 +1,25 @@
+.comment-type,.comment-star{
+	padding: 10px;
+	line-height: 30px;
+	height: 30px;
+	font-size: 14px;
+	color: #666;
+	background: #eaeaea;
+}
+.comment-star span.active{
+	color: #009966;
+}
+.comment-type .type{
+	border-radius: 5px;
+	padding: 5px;
+	background: #cfcfcf;
+}
+.comment-type .type.active{
+	color: #fff;
+	background: #009966;
+}
+
+.comment-body{
+	margin-top:10px;
+	padding: 10px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <!--ios是否运行创建快捷启动方式-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <!--ios顶部通知栏的样式 黑色-->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--遇到数字不让转成电话号码格式-->
+    <meta content="telephone=no" name="format-detection">
+    <meta content="mail=no" name="format-detection">
+    <meta name="description" content="宜邮商城是集合邮政邮票，报刊，特色农产品为一体的特色商城">
+    <meta name="Keywords" content="宜春邮政，邮票，报刊，农产品">
+    <link type="image/x-icon" rel="shortcut icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>epost</title>    
+</head>
+
+<body style="background: #E3E9E9">
+	<!--首页内容-->
+	<div class="ct_container">
+		<header class="ct_header">
+			<a href="javascript:history.back();" class="left"><span class="fa fa-arrow-left"></span></a>
+			<h3>反馈</h3>
+			<a href="index.html" class="right"><span class="fa fa-home"></span></a>
+		</header>
+		<div class="ct_content">
+			<div id="feedback" class="mui-page feedback">
+				<div class="mui-page-content">
+					<p>问题和意见</p>
+					<div class="row mui-input-row">
+						<textarea id='question' class="mui-input-clear question" placeholder="请详细描述你的问题和意见..."></textarea>
+					</div>
+					<p>图片(选填,提供问题截图)</p>
+					<div id='image-list' class="row image-list">
+						
+						<div class="image-item">
+							<div class="image-close space">X</div>
+							<img src="image/logo.jpg" width="65px" height="65px" style="position: absolute; left: 0px; top: 0px;" />
+							<input type="file" accept="image/*" id="image-1">
+						</div>
+						<div class="image-item space">
+							<div class="image-close">X</div>
+							<input type="file" accept="image/*" id="image-1">
+						</div>
+					</div>
+					<p>QQ/邮箱</p>
+					<div class="mui-input-row">
+						<input id='contact' type="text" class="mui-input-clear  contact" placeholder="(选填,方便我们联系你 )" />
+					</div>
+					<button id='submit' type="button" class="feedback-btn">提交</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+	<script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/zepto/zepto.min.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/feedback.js"></script>
+</body>
+</html>

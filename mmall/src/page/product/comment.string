@@ -1,0 +1,39 @@
+{{#comments}}
+    <div class="panel comment-item">
+        <div class="panel panel-body">
+            <div class="comment">
+                <span class="username">用户:{{username}}</span>
+                <span class="star">
+                    {{#score}}
+                        {{#.}}
+                            <i class="fa fa-star active"/>
+                        {{/.}}
+                        {{^.}}
+                            <i class="fa fa-star"/>
+                        {{/.}}
+                    {{/score}}
+                </span>
+            </div>
+            <div class="panel panel-body info">
+                {{body}}
+            </div>
+            <div class="date">
+                <span class="type">{{type}}</span>
+                发表于 <span>{{createTime}}</span>
+            </div>
+        </div>
+    </div>
+{{/comments}}
+{{#pageInfo}}
+    <div class="page-info">
+        {{#hasPre}}
+            <span class="page-has pre">&lt;&lt;</span>
+        {{/hasPre}}
+        {{#pages}}
+            <span class="page-index" data-index={{.}}>{{.}}</span>
+        {{/pages}}
+        {{#hasNext}}
+            <span class="page-has next">&gt;&gt;</span>
+        {{/hasNext}}
+    </div>
+{{/pageInfo}}

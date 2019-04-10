@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <!--ios是否运行创建快捷启动方式-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <!--ios顶部通知栏的样式 黑色-->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--遇到数字不让转成电话号码格式-->
+    <meta content="telephone=no" name="format-detection">
+    <meta content="mail=no" name="format-detection">
+    <meta name="description" content="宜邮商城是集合邮政邮票，报刊，特色农产品为一体的特色商城">
+    <meta name="Keywords" content="宜春邮政，邮票，报刊，农产品">
+    <link type="image/x-icon" rel="shortcut icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/orderDetail.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>epost</title>    
+</head>
+
+<body>
+	<!--首页内容-->
+	<div class="ct_container">
+		<header class="ct_header">
+			<a href="javascript:history.back();" class="left"><span class="fa fa-arrow-left"></span></a>
+			<h3>订单详情</h3>
+			<a href="setting.html" class="right"><span class="fa fa-cog"></span></a>
+		</header>
+		<div class="ct_content" style="padding-bottom: 0px;">
+			<div class="ct_wrapper">
+				<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+	
+	<script type="text/tamplate" id="orderDetail">
+		<div class="mui-card">
+			<div class="mui-card-header">订单详情</div>
+			<div class="mui-card-content">
+				<div class="mui-card-content-inner">
+					<p>订单号：<%= orderDetail.orderNo%></p>
+					<p>创建时间：<%= orderDetail.createTime%></p>
+					<p>收件信息：
+							<%= orderDetail.shippingVo.receiverName%> 
+							<%= orderDetail.shippingVo.receiverProvince%>
+							<%= orderDetail.shippingVo.receiverCity%>
+							<%= orderDetail.shippingVo.receiverAddress%>
+					</p>
+					<p>订单状态：
+						<% if(orderDetail.status>=20 && orderDetail.status<40){%>
+							未发货
+						<% }else if(orderDetail.status>=40){%>
+							已发货
+						<% }else if(orderDetail.status==0){%>
+							已取消
+						<% }else if(orderDetail.status>=10 && orderDetail.status<20){%>
+							未支付
+						<% }else if(orderDetail.status==5){%>
+							已退款
+						<% } %>
+					</p>
+					<p>支付方式：<%= orderDetail.paymentTypeDesc%></p>
+				</div>
+			</div>
+		</div>
+		<div class="mui-card">
+			<div class="mui-card-header">商品详情</div>
+			<div class="mui-card-content">
+				<div class="mui-card-content-inner">
+					<ul class="mui-table-view">
+						<% for(var n=0;n<orderDetail.orderItemVoList.length;n++) { %>
+    						<% var orderItem =orderDetail.orderItemVoList[n] %>
+    						<li class="mui-table-view-cell mui-media">
+        						<a href="javascript:;">
+            						<img class="mui-media-object mui-pull-left" src="<%=orderDetail.imageHost%><%= orderItem.productImage%>">
+            						<div class="mui-media-body">
+                						<%= orderItem.productName%>
+                						<p class='mui-ellipsis'>
+                							￥<%= orderItem.currentUnitPrice%>
+                							<span class="mui-pull-right">×<%= orderItem.quantity%></span>
+                						</p>
+            						</div>
+        						</a>
+    						</li>
+    					<% } %>
+    				</ul>
+    				<p>
+    					<span>订单总价：￥<%= orderDetail.payment%></span>	
+    				</p>
+				</div>
+			</div>
+		</div>
+		<% if(orderDetail.tradeVoList) {%>
+		<div class="mui-card">
+			<div class="mui-card-header">物流详情</div>
+			<div class="mui-card-content">
+				<div class="mui-card-content-inner">
+					<%for(var i=0;i<orderDetail.tradeVoList.length;i++){%>
+						<p class="tradeNo">物流单号：<%=orderDetail.tradeVoList[i].tradeNo%></p>
+						<%for(var j=0;j<orderDetail.tradeVoList[i].trade.length;j++){%>
+							<p>
+								<div class="tradeInfo"><%=orderDetail.tradeVoList[i].trade[j].AcceptStation%></div>
+								<div class="tradeInfo"><%=orderDetail.tradeVoList[i].trade[j].AcceptTime%></div>
+							</p>
+						<%}%>
+					<%}%>
+				</div>
+			</div>
+		</div>
+		<% }%>
+	</script>
+
+	<script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/zepto/zepto.min.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/orderDetail.js"></script>
+</body>
+</html>

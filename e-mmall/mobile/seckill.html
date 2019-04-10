@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <!--ios是否运行创建快捷启动方式-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <!--ios顶部通知栏的样式 黑色-->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--遇到数字不让转成电话号码格式-->
+    <meta content="telephone=no" name="format-detection">
+    <meta content="mail=no" name="format-detection">
+    <meta name="description" content="宜邮商城是集合邮政邮票，报刊，特色农产品为一体的特色商城">
+    <meta name="Keywords" content="宜春邮政，邮票，报刊，农产品">
+    <link type="image/x-icon" rel="shortcut icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/seckill.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>epost</title>    
+</head>
+
+<body>
+	<!--首页内容-->
+	<div class="ct_container">
+		<header class="ct_header">
+			<a href="javascript:history.back();" class="left"><span class="fa fa-arrow-left"></span></a>
+			<h3>秒杀详情</h3>
+			<a href="index.html" class="right"><span class="fa fa-home"></span></a>
+		</header>
+		<div class="ct_content">
+			<!--MUI滑动区域-->
+			<div class="ct_wrapper">
+				<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="loading">
+							<span class="mui-icon mui-icon-spinner mui-spin"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="p_option">
+        	<a href="javascript:;" class="btn_addCart">立刻秒杀</a>
+		</footer>
+	</div>
+
+	<script type="text/html" id="evaluateList">
+		<div class="mui-slider">
+  			<div class="mui-slider-group mui-slider-loop">
+    			<div class="mui-slider-item mui-slider-item-duplicate">
+    				<a href="#"><img src="<%=seckill.imageHost%><%=seckill.subImages[seckill.subImages.length-1]%>" alt=""/></a>
+    			</div>
+    			<% for(var i=0;i<seckill.subImages.length;i++) { %>
+    				<div class="mui-slider-item">
+    					<a href="#"><img src="<%=seckill.imageHost%><%=seckill.subImages[i]%>" alt=""/></a>
+    				</div>
+    			<% } %>
+    			<div class="mui-slider-item mui-slider-item-duplicate">
+    				<a href="#"><img src="<%=seckill.imageHost%><%=seckill.subImages[0]%>" alt=""/></a>
+    			</div>
+  			</div>
+  			<div class="mui-slider-indicator">
+  				<% for(var i=0;i<seckill.subImages.length;i++) { %>
+					<div class="mui-indicator <%=i==0?'mui-active':''%>"></div>
+				<% } %>
+			</div>
+		</div>
+		<div class="s-info-plane">
+                <div class="s-label">
+                    <i class="fa fa-bolt"></i>    
+                    限时秒杀
+                </div>
+                <div class="s-info">
+                    剩余时间
+                    <span class="s-date day">--</span>
+                    <span class="s-date hour">--</span>
+                    <span class="s-date minute">--</span>
+                    <span class="s-date second">--</span>
+                </div>
+        </div>
+		<!--商品名称-->
+		<div class="p_title"><%=seckill.seckillName%> <p><%=seckill.subtitle%>(限购一次)</p></div>
+		<!--商品价格-->
+		<div class="p_price">
+			秒杀价格：<strong class="present">￥<%=seckill.seckillPrice%></strong><strong class="integral">￥<%=seckill.price%></strong>
+		</div>
+		<!--商品库存-->
+		<div class="p_number">
+			购买数量：
+			<!--mui数字输入框-->
+			<div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='<%=seckill.seckillStock%>'>
+  				<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+  				<input class="mui-numbox-input" type="number" />
+  				<button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+			</div>
+			剩余<%=seckill.seckillStock%>件
+		</div>
+		<div class="p_tab">
+			<div class="p_tab_group">
+							
+			</div>
+		</div>
+	</script>
+
+	<script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/jquery/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.countdown/2.1.0/jquery.countdown.min.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/seckill.js"></script>
+</body>
+</html>

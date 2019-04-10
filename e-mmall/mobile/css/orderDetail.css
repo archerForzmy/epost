@@ -1,0 +1,17 @@
+.mui-card-header{
+	color: #666;
+	font-size: 12px;
+}
+.mui-card-content-inner p{
+	font-size: 10px;
+	color: #000;
+}
+.tradeNo{
+	background: #efefef;
+	padding: 5px;
+}
+
+.mui-card-content-inner .tradeInfo{
+	font-size: 6px;
+	color: #666;
+}

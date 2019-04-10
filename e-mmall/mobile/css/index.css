@@ -1,0 +1,207 @@
+/* 分类区 */
+.ct_nav{
+	width: 100%;
+	padding: 10px;
+	border-bottom: 1px solid #eee; 
+}
+.ct_nav a{
+	width: 33.33%;
+	float: left;
+}
+.ct_nav a img{
+	display: block;
+	width: 100%;
+}
+
+/* 推荐区 */
+.ct_groom{
+	width: 100%;
+	padding: 10px;
+}
+.ct_groom .left{
+	width: 67%;
+	float: left;
+}
+.ct_groom .left a{
+	display: block;
+}
+.ct_groom .left a img{
+	float: left;
+	width: 50%;
+}
+.ct_groom .right{
+	width: 33%;
+	float: right;
+}
+.ct_groom .right a{
+	display: block;
+}
+.ct_groom .right a img{
+	width: 100%;
+}
+
+/* 专区 */
+.ct_area{
+	width: 100%;
+	padding: 10px;
+}
+.ct_area .ct_title img{
+	width: 100%;
+	display: block;
+}
+.ct_area .ct_brand{
+	width: 100%;
+}
+.ct_area .ct_brand a{
+	width: 25%;
+	float: left;
+}
+.ct_area .ct_brand a img{
+	display: block;
+	width: 100%;
+}
+
+/* 商品区 */
+.ct_produces{
+	width: 100%;
+	padding:0 10px;
+}
+.ct_produces .ct_produces_item{
+	width: 48%;
+	float: left;
+	margin-top: 10px;
+}
+.ct_produces .ct_produces_item:nth-child(2n){
+	margin-left: 4%;
+}
+.ct_produces .ct_produces_item .ct_produces_item_box{
+	width: 100%;
+	min-height: 200px;
+	box-shadow: 0 0 3px #eee;
+	display: block;
+	text-align: center;
+}
+
+.ct_produces .ct_produces_item .ct_produces_item_box img{
+	width: 100%;
+	display: block;
+}
+
+.ct_produces .ct_produces_item .ct_produces_item_box p:first-of-type{
+	padding: 0 10px;
+}
+.ct_produces .ct_produces_item .ct_produces_item_box .nowPrice{
+	font-size: 12px;
+	color: red;
+}
+.ct_produces .ct_produces_item .ct_produces_item_box .oldPrice{
+	font-size: 12px;
+	color: #ccc;
+	text-decoration: line-through;
+}
+.ct_produces > a{
+	width: 100%;
+	float: left;
+}
+.ct_produces > a img{
+	width: 100%;
+	display: block;
+}
+
+.mui-content>.mui-table-view:first-child{
+	margin-top: 0px;
+}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell.mui-media{
+	background: #009966;
+	color: #fff;
+	font-weight: 900;
+}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell .mui-media-body{
+	color: #fff;
+	font-weight: 900;
+}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell.mui-media.mui-active{
+	background: #1f9966;
+}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell .mui-icon{
+	font-weight: 900;
+}
+
+/*按钮未被按下时的样式*/
+.mui-btn-primary {
+	border: 1px solid #009966;/*按钮的边框线颜色*/
+	background: #009966;/*按钮的背景色*/
+}
+/*按钮被按下时的样式*/
+.mui-btn-primary:active {
+	color: #fff;/*按钮上文字的颜色*/
+	border: 1px solid #1f9966;/*按钮被按下时边框线的颜色*/
+	background-color: #1f9966 !important;/*按钮被按下时的颜色*/
+}
+/*秒杀区域*/
+.seckill-content{
+	position: relative;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	height: auto;
+}
+.seckill-content .seckill-head{
+	height: 20px;
+	margin-bottom: 10px;
+}
+.seckill-title{
+	position: absolute;
+	left: 10px;
+	font-weight: 900;
+	font-size: 16px;
+	color:#1f9966;
+}
+.dateContent{
+	position: absolute;
+	right: 10px;
+	font-size: 12px;
+}
+
+.dateContent .day,.hour,.minute,.second{
+	background-color: black;
+	color: #fff;
+	padding:2px;
+	border-radius: 1px;
+}
+
+.seckill-item{
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+}
+.seckill-img{
+	height: 80px;
+	width: 80px;
+}
+.seckill-name{
+	font-size: 8px;
+	margin-bottom: 0px;
+	height:12px;
+	line-height: 12px;
+	overflow: hidden;text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.seckill-price{
+	font-size: 12px;
+	color: #fff;
+	background: #009966;
+	height: 20px;
+	line-height: 20px;
+	padding: 2px;
+	border: 1px solid #009966;
+}
+.seckill-old-price{
+	margin-left: -5px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	text-decoration: line-through;
+	color: #999;
+	padding: 2px;
+	border: 1px solid #009966;
+}

@@ -1,0 +1,229 @@
+/**
+ * 商品描述
+ */
+.p_title {
+    font-weight: normal;
+    padding: 15px 5px;
+    font-size: 18px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.mui-slider .mui-slider-group .mui-slider-item img{
+    width: 100%;
+    height: 360px;
+}
+
+.mui-control-content {
+    background-color: white;
+}
+.mui-control-content .mui-loading {
+    margin-top: 200px;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+    color: #009966;
+    border-bottom: 2px solid #009966;
+}
+.mui-segmented-control .mui-control-item.mui-active{
+    background-color:#009966;
+}
+
+/**
+ * 商品价格
+ */
+.p_price {
+    padding: 12px 5px;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 14px;
+}
+
+.p_price .fold {
+    float: right;
+    margin: 10px 10px 0 0;
+}
+
+.p_price .fold span {
+    color: #ff0000;
+}
+
+.p_price .present {
+    font-size: 24px;
+    color: #009966;
+}
+
+.p_price .present2 {
+    font-size: 24px;
+    color: #ea543d;
+}
+
+.p_price .integral {
+    font-size: 14px;
+    color: #666;
+    text-decoration: line-through;
+}
+
+.p_price .original {
+    margin-left: 10px;
+    color: #afafaf;
+}
+
+/**
+ * 商品数量
+ */
+.p_number{
+    padding: 10px 5px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+}
+.p_number .jian,.p_number .jia{
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+}
+.p_number input{
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    display: inline-block;
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    text-align: center;
+}
+/**
+ * 商品型号
+ */
+.p_size{
+    padding: 10px 5px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+}
+.p_size .btn_size{
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+.p_size .btn_size.now{
+    background: #009966;
+    color: #ccc;
+}
+.p_detail{
+    padding: 10px 5px;
+    border-bottom: 1px solid #ccc;
+}
+.p_detail img{
+    width: 100%;
+}
+/*底部购买*/
+.p_option{
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 997;
+    border-top: 1px solid #ccc;
+    background-color: #e6e6e6;
+}
+.p_option .btn_cart{
+    position: absolute;
+    top: 13px;
+    font-size: 20px;
+    color: #333;
+}
+.p_option .btn_cart span{
+    position: relative;
+    right:10%;
+    opacity: 0;
+}
+.p_option .btn_cart span.show{
+    animation: aphlaLoading 1s linear 1 forwards;
+}
+
+.p_option .btn_addCart{
+    width: 96%;
+    height: 39px;
+    line-height: 39px;
+    margin-top: 5px;
+    display: block;
+    margin-left: 2%;
+    border: 0;
+    background-color: #009966;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    outline: none;
+    border-radius: 2px;
+}
+/*商品评价*/
+.p_tab {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 14px;
+}
+
+.p_tab .p_tab_group{
+    width: 100%;
+}
+.p_tab .p_tab_group img{
+    display: block;
+    width: 100%;
+}
+
+.s-info-plane{
+    background: #009966;
+    color: #fff;
+    padding: 5px;
+    clear:both;
+    overflow:hidden;
+}
+.s-info-plane .s-label{
+    float: left;
+}
+.s-info-plane .s-info{
+    float: right;
+    font-size: 14px;
+}
+
+/*加载动画 1秒完成，匀速旋转*/
+.loading{
+    text-align: center;
+    margin-top: 200px;
+}
+.loading .mui-icon-spinner{
+    font-size: 48px; 
+    color: #009966;
+    animation: rotateLoading 1s linear infinite;
+}
+@keyframes rotateLoading {
+    from{
+    }
+    to{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes aphlaLoading {
+    from{
+    }
+    to{
+        opacity: 1;
+    }
+}

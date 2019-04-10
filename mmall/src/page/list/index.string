@@ -1,0 +1,22 @@
+{{#list}}
+    <li class="p-item">
+        <div class="p-img-con">
+            <a class="link" href="./product.html?productId={{id}}" target="_blank">
+                <img class="p-img" src="{{imageHost}}{{mainImage}}" alt="{{name}}" />
+            </a>
+        </div>
+        <div class="p-price-con">
+            <span class="p-price">￥{{priceSolr}}</span>
+        </div>
+        <div class="p-name-con">
+            <a class="p-name" href="./product.html?productId={{id}}" target="_blank">{{name}}</a>
+        </div>
+        <div class="p-info-con">
+            <span class="p-volume">销量:{{volume}}</span>
+            <span class="p-comment">评论:{{comment}}</span>
+        </div>
+    </li>
+{{/list}}
+{{^list}}
+    <p class="err-tip">很抱歉，实在找不到您要的商品。</p>
+{{/list}}

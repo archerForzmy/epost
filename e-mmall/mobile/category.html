@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <!--ios是否运行创建快捷启动方式-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <!--ios顶部通知栏的样式 黑色-->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--遇到数字不让转成电话号码格式-->
+    <meta content="telephone=no" name="format-detection">
+    <meta content="mail=no" name="format-detection">
+    <meta name="description" content="宜邮商城是集合邮政邮票，报刊，特色农产品为一体的特色商城">
+    <meta name="Keywords" content="宜春邮政，邮票，报刊，农产品">
+    <link type="image/x-icon" rel="shortcut icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/category.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>宜邮商城</title>    
+</head>
+
+<body>
+	<!--首页内容-->
+	<div class="ct_container">
+		<header class="ct_header">
+			<a href="javascript:history.back();" class="left"><span class="fa fa-arrow-left"></span></a>
+			<h3>分类查询</h3>
+			<a href="search.html" class="right"><span class="fa fa-search"></span></a>
+		</header>
+		<div class="ct_content">
+			<!--MUI滑动区域-->
+			<div class="ct_wrapper">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!--一级菜单-->
+						<div class="cate_left">
+							<ul>
+								
+							</ul>
+						</div>
+						<!--二级菜单-->
+						<div class="cate_right">
+							<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+								<div class="mui-scroll" id="cate_sub">
+									
+								</div>	
+							</div>
+							<ul>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="ct_footer">
+			<a href="index.html" class="tab_home fa fa-home"><span>首页</span></a>
+			<a href="category.html" class="tab_cate fa fa-bars now"><span>分类</span></a>
+			<a href="cart.html" class="tab_cart fa fa-shopping-cart"><span>购物车</span></a>
+			<a href="setting.html" class="tab_user fa fa-user"><span>个人中心</span></a>
+		</footer>
+	</div>
+	<!--菜单模板-->
+   	<script type="text/template" id="fristTamplate">
+   		<% for(var i=0;i<list.length;i++) { %>
+   			<li class="<%=i==0?'now':''%>"><a href="javascript:;" data-id="<%=list[i].id%>"><%=list[i].name%></a></li>
+		<% } %>
+   	</script>
+   	<script type="text/template" id="secondaryTamplate">
+   		<% for(var i=0;i<list.length;i++) { %>
+   			<a class="mui-control-item <%=i==0?'mui-active':''%>" data-id="<%=list[i].id%>"><%=list[i].name%></a>
+		<% } %>
+   	</script>
+   	<script type="text/template" id="productTamplate">
+   		<% if(products.length) { %>
+   		<% for(var i=0;i<products.length;i++) { %>
+   			<li>
+   				<a href="./product.html?productId=<%=products[i].id%>">
+   					<img src="<%=products[i].imageHost%><%=products[i].mainImage%>" data-id="<%=products[i].id%>"/>
+   					<p><%=products[i].name%></p>
+   				</a>
+   			</li>
+		<% } %>
+		<% } else { %>
+			<p>没有更多数据</p>
+		<% } %>
+   	</script>
+
+
+	<script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/jquery/jquery-3.2.1.min.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/category.js"></script>
+    
+</body>
+</html>

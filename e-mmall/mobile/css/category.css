@@ -1,0 +1,79 @@
+.cate_left{
+	width: 66px;
+	position: absolute;
+	left: 0px;
+	top:0px;
+	bottom: 45px;
+}
+
+.cate_left ul{
+	width: 100%;
+	height: auto;
+}
+
+.cate_left ul li{
+	height: 50px;
+	width: 100%;
+	line-height: 50px;
+	text-align: center;
+	background: #f3f4f5;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+
+}
+
+.cate_left ul li.now{
+	background: #fff;
+}
+
+.cate_left ul li.now a{
+	color: #009966;
+}
+
+.cate_left ul li a{
+	display: block;
+	color: #333;
+	font-size: 14px;
+}
+
+/*二级菜单*/
+.cate_right{
+	overflow: hidden;
+	padding: 0 10px;
+	position: absolute;
+	left: 66px;
+	top:0px;
+}
+
+.cate_right ul{
+	width: 100%;
+	overflow-y: scroll;
+}
+
+.cate_right ul li{
+	width: 50%;
+	float: left;
+}
+
+.cate_right ul li a{
+	display: block;
+	width: 100%;
+}
+
+.cate_right ul li a img{
+	width: 100px;
+	height: 100px;
+	display: block;
+	margin: 0 auto;
+}
+.cate_right ul li a p{
+	text-align: center;
+	color:#333;
+}
+
+
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+    color: #009966;
+    border-bottom: 2px solid #009966;
+    background: 0 0;
+}

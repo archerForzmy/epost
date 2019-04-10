@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <!--ios是否运行创建快捷启动方式-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <!--ios顶部通知栏的样式 黑色-->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--遇到数字不让转成电话号码格式-->
+    <meta content="telephone=no" name="format-detection">
+    <meta content="mail=no" name="format-detection">
+    <meta name="description" content="宜邮商城是集合邮政邮票，报刊，特色农产品为一体的特色商城">
+    <meta name="Keywords" content="宜春邮政，邮票，报刊，农产品">
+    <link type="image/x-icon" rel="shortcut icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>epost</title>    
+</head>
+
+<body>
+	<!--首页内容-->
+	<div class="ct_container">
+		<header class="ct_header">
+			<a href="javascript:history.back();" class="left"><span class="fa fa-arrow-left"></span></a>
+			<h3>商品详情</h3>
+			<a href="index.html" class="right"><span class="fa fa-home"></span></a>
+		</header>
+		<div class="ct_content">
+			<!--MUI滑动区域-->
+			<div class="ct_wrapper">
+				<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="loading">
+							<span class="mui-icon mui-icon-spinner mui-spin"></span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<footer class="p_option">
+			<a href="cart.html" class="btn_cart fa fa-shopping-cart">
+				<span class="mui-badge mui-badge-danger">0</span>
+			</a>
+			<a href="javascript:;" class="btn_cart fa fa-edit" id="edit_product">
+			</a>
+        	<a href="javascript:;" class="btn_addCart">加入购物车</a>
+			<!-- <a href="javascript:;" class="btn_pay">立即购买</a> -->
+		</footer>
+	</div>
+
+	<script type="text/html" id="evaluateList">
+		<div class="mui-slider">
+  			<div class="mui-slider-group mui-slider-loop">
+    			<div class="mui-slider-item mui-slider-item-duplicate">
+    				<a href="#"><img src="<%=product.imageHost%><%=product.subImages[product.subImages.length-1]%>" alt=""/></a>
+    			</div>
+    			<% for(var i=0;i<product.subImages.length;i++) { %>
+    				<div class="mui-slider-item">
+    					<a href="#"><img src="<%=product.imageHost%><%=product.subImages[i]%>" alt=""/></a>
+    				</div>
+    			<% } %>
+    			<div class="mui-slider-item mui-slider-item-duplicate">
+    				<a href="#"><img src="<%=product.imageHost%><%=product.subImages[0]%>" alt=""/></a>
+    			</div>
+  			</div>
+  			<div class="mui-slider-indicator">
+  				<% for(var i=0;i<product.subImages.length;i++) { %>
+					<div class="mui-indicator <%=i==0?'mui-active':''%>"></div>
+				<% } %>
+			</div>
+		</div>
+		<!--商品名称-->
+		<div class="p_title"><%=product.name%><p><%=product.subtitle%></p></div>
+		<!--商品价格-->
+		<div class="p_price">
+			价格：<strong class="present">￥<%=product.price%></strong>
+		</div>
+		<div class="p_price">销量：<%=product.volume%></div>
+		<!--商品库存-->
+		<div class="p_number">
+			商品：
+			<!--mui数字输入框-->
+			<div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='<%=product.stock%>'>
+  				<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+  				<input class="mui-numbox-input" type="number" />
+  				<button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+			</div>
+			剩余<%=product.stock%>件
+		</div>
+		<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+			<a class="mui-control-item mui-active" id="item1mobile">
+				商品详情
+			</a>
+			<a class="mui-control-item" id="item2mobile">
+				商品评论
+			</a>
+		</div>
+		<div class="p_tab">
+			<div class="p_tab_group">
+							
+			</div>
+		</div>
+	</script>
+
+	<script type="text/html" id="commentList">
+		<ul class="mui-table-view">
+    		<% for(var i=0;i<comments.list.length;i++) { %>
+			<% var item = comments.list[i] %>
+				<li class="mui-table-view-cell mui-media">
+        			<a href="javascript:;">
+            			<img class="mui-media-object mui-pull-left" src="./image/user.jpg">
+            			<div class="mui-media-body">
+                			<%=item.username%>
+                			<p class='mui-ellipsis'><%=item.body%></p>
+                			<p>发表于 <%= item.createTime%></p>
+            			</div>
+        			</a>
+    			</li>
+    		<% } %>
+		</ul>
+		<div style="margin-top:10px;text-align: center;">
+			<% if(comments.pageIndex>0){ %>
+				<% if(comments.pageNum>1){ %>
+					<button type="button" class="mui-btn pre">上一页</button>
+				<% } %>
+				<%=comments.pageNum%>/<%=comments.pageIndex%>
+				<% if(comments.pageNum<comments.pageIndex){ %>
+					<button type="button" class="mui-btn next">下一页</button>
+				<% } %>
+			<% } %>
+		</div>
+	</script>	
+
+	<script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/jquery/jquery-3.2.1.min.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>

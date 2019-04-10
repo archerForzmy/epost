@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+ 		<%=require('html-loader!./layout/head-common.html') %>
+ 		<title><%=htmlWebpackPlugin.options.title %></title>
+ 	</head>	
+<body>
+	<%= require('html-loader!./layout/nav.html') %>
+    <%= require('html-loader!./layout/header.html') %>
+    <!--面包屑导航-->
+    <div class="crumb">
+        <div class="w">
+            <div class="crumb-con">
+                <a href="./index.html" class="link">EPost</a>
+                <span>></span>
+                <span class="link-text"><%= htmlWebpackPlugin.options.title%></span>
+            </div>
+        </div>
+    </div>
+    <!--关于系统-->
+    <div class="page-wrap w">
+        <%= require('html-loader!./layout/nav-side.html') %>
+        <div class="content with-nav">
+            <div class="panel">
+                <div class="panel-title"><%= htmlWebpackPlugin.options.title%></div>
+                <div class="panel-body">
+                    欢迎访问EPost电商平台。这是一个B2C电商平台。
+                    欢迎访问“神隐少年”的github地址 <a href="https://github.com/archerForzmy" class="link">源码地址</a>
+                    也可以通过邮件联系我：1835060443@qq.com
+                </div>
+            </div>
+        </div>
+    </div>
+    <%=require('html-loader!./layout/foot-common.html') %>
+</body>
+</html>

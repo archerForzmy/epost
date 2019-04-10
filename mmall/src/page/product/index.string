@@ -1,0 +1,98 @@
+<div class="intro-wrap">
+    <!--图片区域-->
+    <div class="p-img-con">
+        <div class="main-img-con">
+            <img class="main-img" src="{{imageHost}}{{mainImage}}" alt="{{name}}"/>
+        </div>
+        <ul class="p-img-list">
+            {{#subImages}}
+            <li class="p-img-item">
+                <img class="p-img" src="{{imageHost}}{{.}}" alt="{{name}}" />
+            </li>
+            {{/subImages}}
+        </ul>
+    </div>
+    <!--价格区域-->
+    <div class="p-info-con">
+        <h1 class="p-name">{{name}}</h1>
+        <p class="p-subtitle">{{subtitle}}</p>
+        <div class="p-info-item p-price-con">
+            <span class="label">价格:</span>
+            <span class="info">￥{{price}}</span>
+            <span class="comment">
+                <span class="label">累计评论</span><br/>
+                <span class="label">{{comment}}+</span>
+            </span>
+        </div>
+        <div class="p-info-item">
+            <span class="label">销量:</span>
+            <span class="info">{{volume}}件</span>
+        </div>
+        <div class="p-info-item">
+            <span class="label">库存:</span>
+            <span class="info">{{stock}}件</span>
+        </div>
+        <div class="p-info-item p-count-con">
+            <span class="label">数量:</span>
+            <input class="p-count" value="1" readonly=""/>
+            <span class="p-count-btn plus">+</span>
+            <span class="p-count-btn minus">-</span>
+        </div>
+        <div class="p-info-item">
+            <a class="btn cart-add">加入购物车</a>
+        </div>
+    </div>
+</div>
+<!--详情区域-->
+<div class="detail-wrap">
+    <div class="detail-tab-con">
+        <ul class="tab-list">
+            <li class="tab-item active" data-index="0">详细描述</li>
+            <li class="tab-item" data-index="1">商品评论</li>
+        </ul>
+    </div>
+    <!--详情富文本-->
+    <div class="detail-con active">
+        <!-- 三层括号表示对渲染方式的加载 -->
+        {{{detail}}}
+    </div>
+    <!--评论区域-->
+    <div class="detail-con">
+        <div class="comment-from">
+            <div class="panel">
+                <div class="panel-title">
+                    商品评价
+                </div>
+                <div class="panel-body">
+                    <div class="comment-star">
+                        <label>评分</label>
+                        <span class="c-stars">
+                            <i class="fa fa-star c-star active" data-index="1"/>
+                            <i class="fa fa-star c-star active" data-index="2"/>
+                            <i class="fa fa-star c-star active" data-index="3"/>
+                            <i class="fa fa-star c-star active" data-index="4"/>
+                            <i class="fa fa-star c-star active" data-index="5"/>
+                        </span>
+                    </div>
+                    <div class="comment-type">
+                        <label>评价</label>
+                        <span class="type active" data-index="1">好评</span> 
+                        <span class="type" data-index="2">中评</span>  
+                        <span class="type" data-index="3">差评</span>  
+                    </div>
+                    <div class="comment-body">
+                        <label class="comment-body-title">内容</label> 
+                        <textarea class="comment-body-content" rows="6" autofocus spellcheck="false">
+                        </textarea>
+                    </div>
+                    <div class="comment-btn">
+                        <button class="btn btn-mini comment-submint">提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comment-page-info">
+            <div class="loading"></div>
+        <div>
+    </div>
+</div>

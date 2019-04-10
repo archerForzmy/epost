@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <!--ios是否运行创建快捷启动方式-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <!--ios顶部通知栏的样式 黑色-->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--遇到数字不让转成电话号码格式-->
+    <meta content="telephone=no" name="format-detection">
+    <meta content="mail=no" name="format-detection">
+    <meta name="description" content="宜邮商城是集合邮政邮票，报刊，特色农产品为一体的特色商城">
+    <meta name="Keywords" content="宜春邮政，邮票，报刊，农产品">
+    <link type="image/x-icon" rel="shortcut icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/orderSeckill.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>epost</title>    
+</head>
+
+<body>
+	<!--首页内容-->
+	<div class="ct_container">
+		<header class="ct_header">
+			<a href="javascript:history.back();" class="left"><span class="fa fa-arrow-left"></span></a>
+			<h3>秒杀订单</h3>
+			<a href="index.html" class="right"><span class="fa fa-home"></span></a>
+		</header>
+		<div class="ct_content">
+			<div class="ct_wrapper">
+				<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="mui-card">
+							<div class="mui-card-header">地址列表</div>								
+							<div class="mui-card-content">
+								<div class="mui-card-content-inner">
+									<ul class="mui-table-view mui-table-view-radio" id="addressList">
+							
+									</ul>
+								</div>
+							</div>
+						</div>		
+						<div class="mui-card" id="productList">
+							
+						</div>		
+					</div>
+				</div>
+			</div>		
+		</div>
+		<footer class="ot_footer">
+			合计:<span class="total"></span>
+			<a class="btn order-submit">提交订单</a>
+		</footer>
+	</div>
+
+	<script type="text/tamplate" id="addressTamplate">
+		<% for(var i=0;i<list.length;i++){%>
+			<li class="mui-table-view-cell <%= i==0?'mui-selected':''%>" data-index='<%=list[i].id%>'>
+				<a class="mui-navigate-right">
+					<%=list[i].receiverName%>,<span class="mui-h6"><%=list[i].receiverPhone%></span>
+					<p class="mui-ellipsis"><%=list[i].receiverProvince%><%=list[i].receiverCity%><%=list[i].receiverAddress%></p>
+				</a>
+			</li>
+		<% } %>
+	</script>	
+	<script type="text/tamplate" id="productTamplate">
+		<div class="mui-card-header">商品列表</div>								
+		<div class="mui-card-content">
+			<div class="mui-card-content-inner">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="<%= order.imageHost%><%= order.productImage%>">
+							<div class="mui-media-body">
+                				<%= order.seckillName%>
+                				<p class='mui-ellipsis'>
+									￥<%= order.currentUnitSeckillPrice%>
+									<span class="oldPrice">￥<%= order.currentUnitPrice%></span>
+									<span class="mui-pull-right">×<%= order.quantity%></span>
+                				</p>
+            				</div>
+						</a>
+					</li>
+					<div style="text-align: right;color:#666;margin-top:10px;">小计：￥<%=order.totalPrice%></div>
+				</ul>					
+			</div>
+		</div>     				
+	</script>	
+	
+
+	<script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/zepto/zepto.min.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/orderSeckill.js"></script>
+</body>
+</html>

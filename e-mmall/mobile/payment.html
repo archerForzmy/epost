@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <!--ios是否运行创建快捷启动方式-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <!--ios顶部通知栏的样式 黑色-->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--遇到数字不让转成电话号码格式-->
+    <meta content="telephone=no" name="format-detection">
+    <meta content="mail=no" name="format-detection">
+    <meta name="description" content="宜邮商城是集合邮政邮票，报刊，特色农产品为一体的特色商城">
+    <meta name="Keywords" content="宜春邮政，邮票，报刊，农产品">
+    <link type="image/x-icon" rel="shortcut icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>epost</title>    
+</head>
+
+<body>
+	<!--首页内容-->
+	<div class="ct_container">
+		<header class="ct_header">
+			<a href="javascript:history.back();" class="left"><span class="fa fa-arrow-left"></span></a>
+			<h3>付款码</h3>
+			<a href="index.html" class="right"><span class="fa fa-home"></span></a>
+		</header>
+		<div class="ct_content">
+			<div class="ct_wrapper">
+				<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+							
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+	<script type="text/tamplate" id="payment">
+		<div class="mui-card">
+			<div class="mui-card-header mui-card-media">
+				<img src="./image/payment.jpg" />
+				<div class="mui-media-body">
+					订单号
+					<p><%= payment.orderNo%></p>
+				</div>
+			</div>
+			<div class="mui-card-content" >
+				<img id="qrcode" src="<%= payment.qrUrl%>" alt="" width="100%"/>
+			</div>
+			<div class="mui-card-footer">
+				该订单有效期2小时，请尽快完成支付
+			</div>	
+		</div>
+	</script>
+	<script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/jquery/jquery-3.2.1.min.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/payment.js"></script>
+</body>
+</html>

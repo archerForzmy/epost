@@ -1,0 +1,89 @@
+.mui-input-group { 
+			margin-top: 10px;
+}
+			
+.mui-input-group:first-child {
+		margin-top: 20px;
+}
+			
+.mui-input-group label {
+		width: 10%;
+		padding-left: 10%;
+		color:#666;
+}
+			
+.mui-input-row label~input,
+.mui-input-row label~select,
+.mui-input-row label~textarea {
+	width: 80%;
+}
+			
+.mui-checkbox input[type=checkbox],
+.mui-radio input[type=radio] {
+		top: 6px;
+}	
+.mui-content-padded {
+		margin-top: 25px;
+}	
+.mui-btn {
+		padding: 10px;
+}
+.area {
+				margin: 20px auto 0px auto;
+}
+.link-area {
+				display: block;
+				margin-top: 25px;
+				text-align: center;
+}
+.spliter {
+				color: #bbb;
+				padding: 0px 8px;
+}
+			
+.oauth-area {
+				position: absolute;
+				bottom: 20px;
+				left: 0px;
+				text-align: center;
+				width: 100%;
+				padding: 0px;
+				margin: 0px;
+}
+			
+.oauth-area .oauth-btn {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background-size: 30px 30px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				margin: 0px 20px;
+				/*-webkit-filter: grayscale(100%); */
+				border: solid 1px #ddd;
+				border-radius: 25px;
+}
+			
+.oauth-area .oauth-btn:active {
+				border: solid 1px #aaa;
+}
+			
+.oauth-area .oauth-btn.disabled {
+				background-color: #ddd;
+}		
+/*按钮未被按下时的样式*/
+.mui-btn-primary {
+	border: 1px solid #009966;/*按钮的边框线颜色*/
+	background: #009966;/*按钮的背景色*/
+}
+/*按钮被按下时的样式*/
+.mui-btn-primary:active {
+	color: #fff;/*按钮上文字的颜色*/
+	border: 1px solid #1f9966;/*按钮被按下时边框线的颜色*/
+	background-color: #1f9966 !important;/*按钮被按下时的颜色*/
+}
+
+.link-area a{
+	color: #666;
+	font-size: 14px;
+}
