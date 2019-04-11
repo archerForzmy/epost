@@ -1,7 +1,10 @@
 # epost
-电商项目，pc端，移动端，后台系统（参考慕课MMall）
-笔者集成actrivemq，solr
-笔者QQ1835060443
+B2C电商项目，pc端，移动端，后台系统（参考慕课MMall）  
+中间件:actrivemq,solr,redis,mongodb  
+后端框架:springMVC,mybatis  
+前端框架:mui,react  
+数据库：mysql（单库）  
+笔者QQ:1835060443  
 
 管理系统预览
 ![管理系统预览](https://raw.githubusercontent.com/archerForzmy/repository/master/admin1.png)
@@ -20,3 +23,8 @@ pc前台预览
 ![移动端预览](https://raw.githubusercontent.com/archerForzmy/repository/master/mobile3.png)
 ![移动端预览](https://raw.githubusercontent.com/archerForzmy/repository/master/mobile4.png)
 ![移动端预览](https://raw.githubusercontent.com/archerForzmy/repository/master/mobile5.png)
+
+
+下期展望:  
+1、项目微服务化（dubbox）  
+2、数据库垂直拆分   
